@@ -1,24 +1,21 @@
-# Проект 4: Место
+# Сервис: Место
 
-### Обзор
+### Интерактивная страница, куда можно добавлять фотографии, удалять их и ставить лайки.
 
-* Figma
-* Картинки
+
+**Вебсайт**
+
+* [Mesto Russia](https://nakatomy.github.io/mesto/)
+
 
 **Figma**
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4)
-
-**Картинки**
-
-Доставать картинки предстоит из Фигмы. Это расхожая практика, поэтому полезно потренироваться.
-Не забудьте [оптимизировать картинки](https://tinypng.com/), чтобы ваш сайт загружался быстрее.
-
-Удачи!
+* [Макет в Figma](https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4)
 
 
-responsive in .profile
-buttons hover effect: edit, +.
-create popup 
-popup button hover
+**Технологии**
+- Классический Бэм
+- HTML
+- CSS
+- JavaScript
 
