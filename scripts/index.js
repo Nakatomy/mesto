@@ -5,8 +5,8 @@ let edit = document.querySelector('.profile__edit');
 let profileName = document.querySelector('.profile__name');
 let profileJob = document.querySelector('.profile__job');
 let formElement = popup.querySelector('.popup__form');
-let nameInput = formElement.querySelector('.popup__text_name');// Воспользуйтесь инструментом .querySelector()
-let jobInput = formElement.querySelector('.popup__text_job');// Воспользуйтесь инструментом .querySelector()
+let nameInput = formElement.querySelector('.popup__text_name'); // Воспользуйтесь инструментом .querySelector()
+let jobInput = formElement.querySelector('.popup__text_job'); // Воспользуйтесь инструментом .querySelector()
 
 
 function togglePopup() {
@@ -17,17 +17,14 @@ function togglePopup() {
     }
 }
 
-
-
-
 // Находим форму в DOM
 
 // Обработчик «отправки» формы, хотя пока
 // она никуда отправляться не будет
-function formSubmitHandler (evt) {
+function formSubmitHandler(evt) {
     evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
-                        // Так мы можем определить свою логику отправки.
-                        // О том, как это делать, расскажем позже.
+    // Так мы можем определить свою логику отправки.
+    // О том, как это делать, расскажем позже.
 
     // Находим поля формы в DOM
 
