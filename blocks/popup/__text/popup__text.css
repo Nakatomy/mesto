@@ -1,0 +1,15 @@
+.popup__text {
+  border: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 17px;
+  outline: none;
+  padding: 14px 0
+}
+
+.popup__text:last-of-type {
+  margin-bottom: 0;
+}

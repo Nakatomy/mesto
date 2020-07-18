@@ -1,0 +1,15 @@
+@import url('./__container/photos__container.css');
+@import url('./__footer/photos__footer.css');
+@import url('./__image/photos__image.css');
+@import url('./__title/photos__title.css');
+@import url('./__like/photos__like.css');
+
+.photos {
+    padding: 50px 0 66px;
+}
+
+@media screen and (max-width: 930px) {
+    .photos {
+        padding: 36px 0 48px;
+    }
+}

@@ -1,0 +1,9 @@
+.photos__like {
+    background: url('../../../images/icon-like.svg') no-repeat;
+    height: 19px;
+    width: 21px;
+    align-self: center;
+    margin-right: 20px;
+    border: 0;
+    padding: 0;
+}

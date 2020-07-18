@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto Russia</title>
+    <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="header__logo"></div>
+    </header>
+    <main class="content">
+        <section class="profile">
+            <img class="profile__avatar" src="./images/profile-avatar.jpg" alt="Жак-Ив Кусто">
+            <div class="profile__info">
+                <div class="profile__container">
+                    <h1 class="profile__name">Жак-Ив Кусто</h1>
+                    <button class="profile__edit" type="button"></button>
+                </div>
+                <p class="profile__job">Исследователь океана</p>
+            </div>
+            <button class="profile__add" type="button"></button>
+        </section>
+        <section class="photos">
+            <ul class="photos__container">
+                <li>
+                    <img class="photos__image" src="./images/photos-moskow.jpeg" alt="Москва">
+                    <div class="photos__footer">
+                        <h3 class="photos__title">Москва</h3>
+                        <button class="photos__like" type="button"></button>
+                    </div>
+                </li>
+                <li>
+                    <img class="photos__image" src="./images/photos-rostow.jpeg" alt="Ростов">
+                    <div class="photos__footer">
+                        <h3 class="photos__title">Ростов</h3>
+                        <button class="photos__like" type="button"></button>
+                    </div>
+                </li>
+                <li>
+                    <img class="photos__image" src="./images/photos-vladivostok.jpeg" alt="Владивосток">
+                    <div class=" photos__footer">
+                        <h3 class="photos__title">Владивосток</h3>
+                        <button class="photos__like" type="button"></button>
+                    </div>
+                </li>
+                <li>
+                    <img class="photos__image" src="./images/photos-konduki.jpeg" alt="Кондуки">
+                    <div class="photos__footer">
+                        <h3 class="photos__title">Кондуки</h3>
+                        <button class="photos__like" type="button"></button>
+                    </div>
+                </li>
+                <li>
+                    <img class="photos__image" src="./images/photos-irkutsk.jpeg" alt="Иркутск">
+                    <div class=" photos__footer">
+                        <h3 class="photos__title">Иркутск</h3>
+                        <button class="photos__like" type="button"></button>
+                    </div>
+                </li>
+                <li>
+                    <img class="photos__image" src="./images/photos-karelia.jpeg" alt="Карелия">
+                    <div class="photos__footer">
+                        <h3 class="photos__title">Карелия</h3>
+                        <button class="photos__like" type="button"></button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <footer class="footer">
+            <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+        </footer>
+        <div class="popup">
+            <div class="popup__container">
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <button class="popup__close" type="button"></button>
+                <form class="popup__form">
+                    <input class="popup__text popup__text_name" type="text" placeholder="Имя" required minlength="3">
+                    <input class="popup__text popup__text_job" type="text" placeholder="Должность" required
+                        minlength="3">
+                    <button class="popup__save" type="submit">Сохранить</button>
+                </form>
+            </div>
+        </div>
+        <script src="./scripts/index.js"></script>
+</body>
+
+</html>

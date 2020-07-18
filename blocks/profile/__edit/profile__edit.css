@@ -1,0 +1,15 @@
+.profile__edit {
+    background: url('../../../images/icon-edit.png') no-repeat center;
+    min-width: 24px;
+    height: 24px;
+    border: solid 1px #ffffff;
+    margin-left: 18px;
+    padding: 0;
+    transition: .1s ease-in;
+    cursor: pointer;
+    outline: none;
+}
+
+.profile__edit:hover {
+    opacity: 0.6;
+}

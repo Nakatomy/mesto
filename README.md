@@ -15,3 +15,10 @@
 Не забудьте [оптимизировать картинки](https://tinypng.com/), чтобы ваш сайт загружался быстрее.
 
 Удачи!
+
+
+responsive in .profile
+buttons hover effect: edit, +.
+create popup 
+popup button hover
+
