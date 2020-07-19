@@ -8,6 +8,7 @@
     padding: 0;
     transition: .1s ease-in;
     cursor: pointer;
+    outline: none;
 }
 
 .photos__like:hover {
