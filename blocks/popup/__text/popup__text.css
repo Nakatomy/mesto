@@ -15,7 +15,7 @@
 }
 
 @media screen and (max-width: 425px) {
-  .popup__save {
+  .popup__text {
     font-size: 12px;
   }
 }
