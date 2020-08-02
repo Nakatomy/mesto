@@ -8,15 +8,19 @@
     border: none;
     transition: .1s ease-in;
     cursor: pointer;
+
 }
 
 .popup__close:hover {
     opacity: 0.6;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 425px) {
     .popup__close {
-        top: -45px;
-        right: -20px;
+        top: -30px;
+        right: -30px;
+        background: url(../../../images/icon-close_small.png) no-repeat center;
+        width: 30px;
+        height: 30px;
     }
 }
