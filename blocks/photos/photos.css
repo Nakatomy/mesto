@@ -3,6 +3,10 @@
 @import url('./__image/photos__image.css');
 @import url('./__title/photos__title.css');
 @import url('./__like/photos__like.css');
+@import url('./__item/photos__item.css');
+@import url('./__delete/photos__delete.css');
+
+
 
 .photos {
     padding: 50px 0 66px;

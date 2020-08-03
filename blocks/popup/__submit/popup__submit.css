@@ -1,4 +1,4 @@
-.popup__save {
+.popup__submit {
     background: #000000;
     border-radius: 2px;
     font-size: 18px;
@@ -12,12 +12,12 @@
     transition: .1s ease-in;
 }
 
-.popup__save:hover {
+.popup__submit:hover {
     opacity: 0.8;
 }
 
 @media screen and (max-width: 425px) {
-    .popup__save {
+    .popup__submit {
         font-size: 14px;
         margin-top: 36px;
         height: 40px;

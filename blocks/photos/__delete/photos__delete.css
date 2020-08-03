@@ -1,0 +1,17 @@
+.photos__delete {
+    background: url('../../../images/icon-delete.svg') no-repeat;
+    height: 19px;
+    width: 18px;
+    border: 0;
+    padding: 0;
+    transition: .1s ease-in;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 18px;
+    right: 15px;
+}
+
+.photos__delete:hover {
+    opacity: .6;
+}

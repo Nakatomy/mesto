@@ -26,55 +26,14 @@
         </section>
         <section class="photos">
             <ul class="photos__container">
-                <li>
-                    <img class="photos__image" src="./images/photos-moskow.jpeg" alt="Москва">
-                    <div class="photos__footer">
-                        <h2 class="photos__title">Москва</h2>
-                        <button class="photos__like" type="button"></button>
-                    </div>
-                </li>
-                <li>
-                    <img class="photos__image" src="./images/photos-rostow.jpeg" alt="Ростов">
-                    <div class="photos__footer">
-                        <h2 class="photos__title">Ростов</h2>
-                        <button class="photos__like" type="button"></button>
-                    </div>
-                </li>
-                <li>
-                    <img class="photos__image" src="./images/photos-vladivostok.jpeg" alt="Владивосток">
-                    <div class=" photos__footer">
-                        <h2 class="photos__title">Владивосток</h2>
-                        <button class="photos__like" type="button"></button>
-                    </div>
-                </li>
-                <li>
-                    <img class="photos__image" src="./images/photos-konduki.jpeg" alt="Кондуки">
-                    <div class="photos__footer">
-                        <h2 class="photos__title">Кондуки</h2>
-                        <button class="photos__like" type="button"></button>
-                    </div>
-                </li>
-                <li>
-                    <img class="photos__image" src="./images/photos-irkutsk.jpeg" alt="Иркутск">
-                    <div class=" photos__footer">
-                        <h2 class="photos__title">Иркутск</h2>
-                        <button class="photos__like" type="button"></button>
-                    </div>
-                </li>
-                <li>
-                    <img class="photos__image" src="./images/photos-karelia.jpeg" alt="Карелия">
-                    <div class="photos__footer">
-                        <h2 class="photos__title">Карелия</h2>
-                        <button class="photos__like" type="button"></button>
-                    </div>
-                </li>
+
             </ul>
         </section>
     </main>
     <footer class="footer">
         <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
-    <div class="popup">
+    <div class="popup popup_type_edit-profile">
         <div class="popup__container">
             <h3 class="popup__title">Редактировать профиль</h3>
             <button class="popup__close" type="button"></button>
@@ -83,13 +42,38 @@
                     minlength="3">
                 <input class="popup__text popup__text_job" name="job" type="text" placeholder="Должность" required
                     minlength="3">
-                <button class="popup__save" type="submit">Сохранить</button>
+                <button class="popup__submit" type="submit">Сохранить</button>
             </form>
         </div>
     </div>
-    <template>
-        <li>
-            <img class="photos__image" alt="Фото с Места">
+    <div class="popup popup_type_add-card">
+        <div class="popup__container">
+            <h3 class="popup__title">Новое место</h3>
+            <button class="popup__close" type="button"></button>
+            <form class="popup__form">
+                <input class="popup__text popup__text_place" name="place" type="text" placeholder="Название" required
+                    minlength="3">
+                <input class="popup__text popup__text_url" name="url" type="text" placeholder="Ссылка на картинку"
+                    required minlength="3">
+                <button class="popup__submit" type="submit">Создать</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup popup_type_image">
+        <div class="popup__image-container">
+            <button class="popup__close" type="button"></button>
+            <figure class="popup__figure">
+                <img class="popup__image" src="" alt="">
+                <figcaption class="popup__description"></figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <template class="template-card">
+        <li class="photos__item">
+            <button class="photos__delete" type="button"></button>
+            <img class="photos__image" alt="Фото с Места" src="#">
             <div class="photos__footer">
                 <h2 class="photos__title">Москва</h2>
                 <button class="photos__like" type="button"></button>
