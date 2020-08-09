@@ -19,11 +19,11 @@ const addImageModalSubmit = addCardModal.querySelector('.popup__submit');
 const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__job');
 //Edit Form Data
-const nameInput = editProfileForm.querySelector('.popup__text_name');
-const jobInput = editProfileForm.querySelector('.popup__text_job');
+const nameInput = editProfileForm.querySelector('.popup__input_name');
+const jobInput = editProfileForm.querySelector('.popup__input_job');
 //"Add image" Form Data
-const placeInput = addCardModal.querySelector('.popup__text_place');
-const urlInput = addCardModal.querySelector('.popup__text_url');
+const placeInput = addCardModal.querySelector('.popup__input_place');
+const urlInput = addCardModal.querySelector('.popup__input_url');
 
 const cardTemplate = document.querySelector('.template-card').content.querySelector('.photos__item');
 const photosContainer = document.querySelector('.photos__container');
@@ -31,12 +31,7 @@ const photosContainer = document.querySelector('.photos__container');
 const imageModalDescription = imageModal.querySelector('.popup__description');
 const imageModalImg = imageModal.querySelector('.popup__image');
 
-imageModalClose.addEventListener('click', () => {
-	toggleModalWindow(imageModal);
-});
-
-const initialCards = [
-	{
+const initialCards = [{
 		name: 'Архыз',
 		link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
 	},
@@ -92,14 +87,24 @@ function renderCard(data) {
 	photosContainer.prepend(createCard(data));
 }
 
-initialCards.forEach((data) => {
-	renderCard(data);
-});
-
 // Any modal Toggle
 function toggleModalWindow(modalWindow) {
+	if (modalWindow.classList.contains('popup_opened')) {
+		document.removeEventListener('click', closeOnClickOutside);
+		document.removeEventListener('keydown', closeOnEsc);
+	}
+	document.addEventListener('click', closeOnClickOutside);
+	document.addEventListener('keydown', closeOnEsc);
 	modalWindow.classList.toggle('popup_opened');
 }
+
+function toggleAddModalWindow() {
+	hideInputError(addCardForm, urlInput);
+	hideInputError(addCardForm, placeInput);
+	addCardForm.reset();
+	toggleModalWindow(addCardModal);
+}
+
 
 //Toggle Edit Modal
 function toggleEditModalWindow() {
@@ -108,6 +113,8 @@ function toggleEditModalWindow() {
 		jobInput.value = profileJob.textContent;
 	}
 	toggleModalWindow(editProfileModal);
+	hideInputError(editProfileForm, nameInput);
+	hideInputError(editProfileForm, jobInput);
 }
 
 //Submit - Edit modal
@@ -125,24 +132,49 @@ function addCardSubmitHandler(evt) {
 		name: placeInput.value,
 		link: urlInput.value
 	});
-	toggleModalWindow(addCardModal);
+	toggleAddModalWindow();
+}
+
+//close modals on click outside
+function closeOnClickOutside(evt) {
+	if (evt.target.classList.contains('popup')) {
+		toggleModalWindow(document.querySelector('.popup_opened'));
+	}
+}
+
+//close modals on Escape
+function closeOnEsc(evt) {
+	if (evt.key === 'Escape') {
+		toggleModalWindow(document.querySelector('.popup_opened'));
+	}
 }
 
 editProfileForm.addEventListener('submit', formSubmitHandler);
+
 addCardForm.addEventListener('submit', addCardSubmitHandler);
 
 openAddCardModalButton.addEventListener('click', () => {
-	toggleModalWindow(addCardModal);
+	addImageModalSubmit.classList.add('popup__submit_disabled');
+	toggleAddModalWindow();
 });
 
 addCardModalCloseButton.addEventListener('click', () => {
-	toggleModalWindow(addCardModal);
+	toggleAddModalWindow();
 });
 
 openEditProfileModalButton.addEventListener('click', () => {
+	editProfileModalSaveButton.classList.remove('popup__submit_disabled');
 	toggleEditModalWindow();
 });
 
 editProfileModalCloseButton.addEventListener('click', () => {
-	toggleModalWindow(editProfileModal);
+	toggleEditModalWindow();
+});
+
+imageModalClose.addEventListener('click', () => {
+	toggleModalWindow(imageModal);
+});
+
+initialCards.forEach((data) => {
+	renderCard(data);
 });
