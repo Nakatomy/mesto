@@ -92,9 +92,10 @@ function toggleModalWindow(modalWindow) {
 	if (modalWindow.classList.contains('popup_opened')) {
 		document.removeEventListener('click', closeOnClickOutside);
 		document.removeEventListener('keydown', closeOnEsc);
+	} else {
+		document.addEventListener('click', closeOnClickOutside);
+		document.addEventListener('keydown', closeOnEsc);
 	}
-	document.addEventListener('click', closeOnClickOutside);
-	document.addEventListener('keydown', closeOnEsc);
 	modalWindow.classList.toggle('popup_opened');
 }
 
@@ -104,7 +105,6 @@ function toggleAddModalWindow() {
 	addCardForm.reset();
 	toggleModalWindow(addCardModal);
 }
-
 
 //Toggle Edit Modal
 function toggleEditModalWindow() {
@@ -148,6 +148,8 @@ function closeOnEsc(evt) {
 		toggleModalWindow(document.querySelector('.popup_opened'));
 	}
 }
+
+
 
 editProfileForm.addEventListener('submit', formSubmitHandler);
 
